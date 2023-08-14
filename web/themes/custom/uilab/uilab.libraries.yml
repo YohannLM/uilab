@@ -1,0 +1,7 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      public/css/style.css: {}
+  js:
+    public/js/app.js: {}

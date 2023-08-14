@@ -1,0 +1,30 @@
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries
+
+
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+/web/sites/*/files
+/web/sites/*/private
+
+# Ignore multi-site test environment.
+/web/sites/simpletest
+
+# Ignore configuration files that may contain sensitive information.
+*/settings*.php
+
+# Ignore paths that contain user-generated content.
+# */files
+# */private
+hash_salt.txt
+# Ignore multi-site test environment.
+# simpletest
+.idea
+.lando.yml
