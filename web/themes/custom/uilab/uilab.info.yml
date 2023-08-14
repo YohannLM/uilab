@@ -23,9 +23,3 @@ libraries:
 
 ckeditor5-stylesheets:
   - public/css/ckeditor5.css
-
-libraries-override:
-  ui_suite_bootstrap/bootstrap:
-    css:
-      theme:
-        /libraries/bootstrap/dist/css/bootstrap.min.css: false

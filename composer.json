@@ -21,7 +21,10 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/gin": "^3.0@RC",
+        "drupal/layout_options": "^1.2",
         "drupal/mix": "^1.6",
+        "drupal/ui_patterns": "^1.7",
+        "drupal/ui_styles": "^1.5",
         "drupal/ui_suite_bootstrap": "^5.0@alpha",
         "drush/drush": "^12.1"
     },
