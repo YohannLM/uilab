@@ -73,20 +73,25 @@ services:
       - appserver
 
 tooling:
-  node:
-    service: appserver
-  npm:
-    service: appserver
-  emulsify:
-    service: appserver
-    cmd: "emulsify --help"
-    description: "Emulsify CLI"
-
-
+  # FRONTEND
   yarn:
     service: node
   npx:
     service: appserver
+  watch:
+    service: node
+    description: "yarn run watch"
+    cmd: "cd $LANDO_MOUNT/web/themes/custom/uilab/assets && yarn watch"
+  build-dev:
+    service: node
+    description: "yarn dev"
+    cmd: "cd $LANDO_MOUNT/web/themes/custom/uilab/assets && yarn dev"
+  build-prod:
+    service: node
+    description: "yarn prod"
+    cmd: "cd $LANDO_MOUNT/web/themes/custom/uilab/assets && yarn prod"
+
+  # TEST
   phpcs:
     service: appserver
     cmd: "phpcs --standard=Drupal,DrupalPractice"
@@ -97,7 +102,7 @@ tooling:
     description: Automatically fix Drupal coding standards suggestions.
 
 
-  #  NGINX VERSION
+  #  APACHE VERSION
   xdebug-on:
     service: appserver
     description: Enable xdebug for nginx.
